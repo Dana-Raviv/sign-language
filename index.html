@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaltura Player sign language</title>
+    <style>
+        /* Container to maintain 19:9 aspect ratio */
+        .kaltura-video-container {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Full height of the viewport */
+            overflow: hidden;
+        }
+
+        /* Player size and positioning */
+        #kaltura_player_383267995 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="kaltura-video-container">
+        <div id="kaltura_player_383267995"></div>
+    </div>
+
+    <!-- Kaltura script and player configuration -->
+    <script type="text/javascript" src="https://cdnapisec.kaltura.com/p/6019792/embedPlaykitJs/uiconf_id/55809912"></script>
+    <script type="text/javascript">
+        try {
+            var kalturaPlayer = KalturaPlayer.setup({
+                targetId: "kaltura_player_383267995",
+                provider: {
+                    partnerId: 6019792,
+                    uiConfId: 55809912
+                }
+            });
+            kalturaPlayer.loadMedia({entryId: '1_u0mdrpne'});
+        } catch (e) {
+            console.error(e.message);
+        }
+    </script>
+</body>
+</html>
